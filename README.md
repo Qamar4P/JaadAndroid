@@ -22,4 +22,9 @@ if(tags.getHiLights() != null){
 }
 ```
 
-Everyone can used this library without any permision. Thanks
+#icense
+
+Public domain.
+
+Everyone can used this library without any permision. Inherited condition may applied!
+Thanks 
