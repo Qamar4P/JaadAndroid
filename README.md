@@ -22,7 +22,7 @@ if(tags.getHiLights() != null){
 }
 ```
 
-#icense
+# License
 
 Public domain.
 
