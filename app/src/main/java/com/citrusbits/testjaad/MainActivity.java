@@ -1,5 +1,7 @@
 package com.citrusbits.testjaad;
 
+import android.media.MediaMetadataRetriever;
+import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +12,7 @@ import net.sourceforge.jaad.mp4.GoProUtil;
 import net.sourceforge.jaad.mp4.boxes.impl.GoProTagsBox;
 
 import java.io.BufferedInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
@@ -40,11 +43,17 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 final StringBuilder stringBuilder = new StringBuilder();
                 try {
-//                    GoProTagsBox tags = GoProUtil.getHilights(new RandomAccessFile(Environment.getExternalStorageDirectory().getAbsolutePath() + "/GOPR0175.MP4", "r"));
-//                    InputStream inputStream = new BufferedInputStream(new URL("http://localhost:6582?BRIDGE&%2FDCIM%2FGOPR0482.MP4&GOPR0482.MP4&1029157111").openConnection().getInputStream());
-                    InputStream inputStream = new BufferedInputStream(new URL("http://localhost:6582?BRIDGE&%2FGOPR0175.MP4&GOPR0175.MP4&80898399").openConnection().getInputStream());
-                    GoProTagsBox tags = GoProUtil.getHilights(inputStream);
-                    stringBuilder.append("Count: "+tags.getCount());
+                    String videoPath = Environment.getExternalStorageDirectory().getAbsolutePath() + "/GOPR0175.MP4";
+                    GoProTagsBox tags = GoProUtil.getHilights(new RandomAccessFile(videoPath, "r"));
+//                    InputStream inputStream = new BufferedInputStream(new URL("http://localhost:6582?BRIDGE&%2FGOPR0175.MP4&GOPR0175.MP4&80898399").openConnection().getInputStream());
+//                    GoProTagsBox tags = GoProUtil.getHilights(inputStream);
+                    MediaMetadataRetriever retriever = new MediaMetadataRetriever();
+//use one of overloaded setDataSource() functions to set your data source
+                    retriever.setDataSource(getApplicationContext(), Uri.fromFile(new File(videoPath)));
+                    String time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
+                    long timeInMillisec = Long.parseLong(time );
+                    stringBuilder.append("DURATION : "+timeInMillisec);
+                    stringBuilder.append("\nGoPro Hi light count: "+tags.getCount());
                     if(tags.getHiLights() != null){
                         for (long l : tags.getHiLights()) {
                             stringBuilder.append("\nHiLight: "+l);

@@ -53,19 +53,8 @@ public class GoProUtil {
 			else if(type==BoxTypes.MOVIE_BOX) {
 				Box moov = box;
 				moovFound = true;
-//				MetaData metaData = new MetaData();
-//				
-//				if(moov.hasChild(BoxTypes.META_BOX)) {
-//					metaData.parse(null, moov.getChild(BoxTypes.META_BOX));
-//					for (Object keyValue: metaData.getAll().values()) {
-//						System.out.println(""+keyValue);
-//					}
-//				}
 				if(moov.hasChild(BoxTypes.USER_DATA_BOX)) {
 					final Box udta = moov.getChild(BoxTypes.USER_DATA_BOX);
-//					for (Object keyValue: udta.getChildren()) {
-//						System.out.println(""+keyValue);
-//					}
 					//gopro Type: 1213025620, Offset: 272
 					if(udta.hasChild(BoxTypes.GO_PRO_TAGS_BOX)) {
 						final GoProTagsBox tags = (GoProTagsBox) udta.getChild(BoxTypes.GO_PRO_TAGS_BOX);
