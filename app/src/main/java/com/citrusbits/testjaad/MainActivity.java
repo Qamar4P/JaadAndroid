@@ -48,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
 //                    InputStream inputStream = new BufferedInputStream(new URL("http://localhost:6582?BRIDGE&%2FGOPR0175.MP4&GOPR0175.MP4&80898399").openConnection().getInputStream());
 //                    GoProTagsBox tags = GoProUtil.getHilights(inputStream);
                     MediaMetadataRetriever retriever = new MediaMetadataRetriever();
-//use one of overloaded setDataSource() functions to set your data source
                     retriever.setDataSource(getApplicationContext(), Uri.fromFile(new File(videoPath)));
                     String time = retriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
                     long timeInMillisec = Long.parseLong(time );

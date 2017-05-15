@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TestJaad.iml" filepath="$PROJECT_DIR$/TestJaad.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jaadandro/jaadandro.iml" filepath="$PROJECT_DIR$/jaadandro/jaadandro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jaad_android/jaad_android.iml" filepath="$PROJECT_DIR$/jaad_android/jaad_android.iml" />
     </modules>
   </component>
 </project>
