@@ -26,5 +26,7 @@ if(tags.getHiLights() != null){
 Public domain.
 
 Everyone can used this library without any permision. Inherited condition may applied!
+
+
 Hit star if this useful for you.
 Thanks 
