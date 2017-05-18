@@ -28,5 +28,5 @@ Public domain.
 Everyone can used this library without any permision. Inherited condition may applied!
 
 
-Hit star if this useful for you.
+Hit star if this is useful for you.
 Thanks 
