@@ -1,6 +1,5 @@
 # JaadAndroid
-fork from https://github.com/dant3/jaad and add Android compatibility and support for reading GoPro Tags
-
+Fork from https://github.com/dant3/jaad and add Android compatibility and support for reading GoPro Tags. Only library for this purpose.
 
 # How to use
 
@@ -27,4 +26,5 @@ if(tags.getHiLights() != null){
 Public domain.
 
 Everyone can used this library without any permision. Inherited condition may applied!
+Hit star if this useful for you.
 Thanks 
