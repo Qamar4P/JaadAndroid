@@ -3,6 +3,8 @@ Fork from https://github.com/dant3/jaad and add Android compatibility and suppor
 
 # How to use
 
+Download and add as a module in Android studio project. If you do not need, you can delete `aac` and `adts` packages to reduce size
+
 ### From file:
 ```
 GoProTagsBox tags = GoProUtil.getHilights(new RandomAccessFile(Environment.getExternalStorageDirectory().getAbsolutePath() + "/GOPR0175.MP4", "r"));
