@@ -1,6 +1,10 @@
 # JaadAndroid
 Fork from https://github.com/dant3/jaad and add Android compatibility and support for reading GoPro Tags. Only library for this purpose.
 
+# Usage
+
+Access-C Android App by Leef-USA https://play.google.com/store/apps/details?id=com.leefco.leefaccess&hl=en
+
 # How to use
 
 Download and add as a module in Android studio project. If you do not need, you can delete `aac` and `adts` packages to reduce size
