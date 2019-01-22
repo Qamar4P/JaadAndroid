@@ -1,7 +1,7 @@
 # JaadAndroid
 Fork from https://github.com/dant3/jaad and add Android compatibility and support for reading GoPro Tags. Only library for this purpose.
 
-# Usage
+# Used by
 
 Access-C Android App by Leef-USA https://play.google.com/store/apps/details?id=com.leefco.leefaccess&hl=en
 
